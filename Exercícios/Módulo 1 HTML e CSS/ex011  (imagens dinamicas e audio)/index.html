@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagens dinâmicas</h1>
+    <p>Tente abrir esse site em vários dispositvos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+
+    <picture>
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1050px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+    </picture>
+
+    <h1>Reproduzindo Áudio</h1>
+    <p>Vamos aprender a colocar aúdios em HTML5.</p><!--FORMATOS COMPÁTIVEIS COM NAVEGADOR: MP3; WAV; OGG-->
+    <h2>Há 2 maneiras de inserir áudio no seu site.</h2>
+    <h3>Primeira forma</h3>
+    <p>Está aqui embaixo o código para inserir áudio.</p>
+    <audio src="midia/jet-holdon.mp3" autoplay controls></audio>
+    <h3>Segunda forma</h3>
+    <p>E essa é a segunda forma, com outros códigos mas com o mesmo objetivo.</p>
+    <audio preload="metadata" autoplay controls>
+        <source src="midia/rap-gohan.mp3" type="audio/mpeg"> <!--O site sempre vai tentar carregar a primeira linha de código, se não for possível, ele passa para a próxima-->
+        <source src="midia/rap-gohan.ogg" type="audio/ogg">
+        <source src="midia/rap-gohan.wav" type="audio/wav">
+        <p>Infelizmente seu navegador não consegue reproduzir áudio. <a href="midia/rap-gohan.mp3">Clique aqui para baixar o arquivo mp3.</a></p>
+    </audio> 
+</body>
+</html>
